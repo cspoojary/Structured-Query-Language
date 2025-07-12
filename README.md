@@ -90,12 +90,11 @@ SQL Full Course for Beginners (30 Hours) – From Zero to Hero
     2. Exploratory Data Analysis(EDA) Project
     3. Advanced Data Analytics Project
 
-**Database** 
-Stores Data
-**SQL**
-Speak to database
-**DBMS**
-Manage Database
-**Server**
-It is a physical machine where database lives.
+**Database** :Stores Data
+
+**SQL** :Speak to database
+
+**DBMS** :Manage Database
+
+**Server** :It is a physical machine where database lives.
     
