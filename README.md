@@ -30,3 +30,62 @@ SQL Full Course for Beginners (30 Hours) – From Zero to Hero
     1. INSERT 
     2. UPDATE 
     3. DELETE
+
+**INTERMEDIATE LEVEL**
+
+5. Filtering data
+    1. Comparison Operator
+    2. Logical Operator
+    3. BETWEEN
+    4. IN
+    5. LIKE
+6. Combining Data
+    1. Joining Data
+        1. Basic Join
+            1. INNER
+            2. LEFT 
+            3. RIGHT
+            4. FULL
+        2. Advanced Joining
+            1. LEFT Anti Join
+            2. RIGHT Anti Join
+            3. FULL Anti Join
+            4. Cross Join
+        3. How to combine The Right Join
+        4. How To Join Multiple Table
+    2. Set Operators
+        1. UNION
+        2. UNION ALL
+        3. EXCEPT
+        4. INTERSECT
+7. Row Level Functions
+    1. String Functions
+    2. Number Functions
+    3. Date & Time Functions
+    4. Null Functions
+    5. Case statement
+8. Aggregation & Analytical Functions
+    1. Aggregate Functions
+    2. Window Basics
+    3. Window Aggregate Func
+    4. Window Ranking Func
+    5. Window Value Func
+
+**ADVANCED LEVEL**
+
+9. Advanced SQL Techniques
+    1. Subqueries
+    2. CTE 
+    3. Views
+    4. CTAS Table and Temp table
+    5. Stored Procedure
+    6. Triggers
+10. Performance Optimization
+    1. Indexes
+    2. Partitions
+    3. Performance Tips
+11. AI  & SQL
+12. SQL Projects
+    1. Data Warehousing Project
+    2. Exploratory Data Analysis(EDA) Project
+    3. Advanced Data Analytics Project
