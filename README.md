@@ -97,4 +97,23 @@ SQL Full Course for Beginners (30 Hours) – From Zero to Hero
 **DBMS** :Manage Database
 
 **Server** :It is a physical machine where database lives.
-    
+
+**SQL is need to communicate with large Data Bases**.
+
+what is DBMS and SQL server?
+
+DBMS = It is a **software that allows users to create, manage, and interact with databases**. It provides a structured way to store, organize, and retrieve large amounts of data efficiently. Essentially, a DBMS acts as an interface between the user and the database, enabling various operations like data definition, manipulation, and control. 
+
+**why learn sql** : To talk with data
+
+**Types of data base**
+
+Relational = It is like spreadsheet. like rows and column.
+
+Key-Value = Data Is organized in the base of key and value .
+
+Column = Grouped based on columns. Advanced database
+
+Graph = Focuses relationship between object.
+
+Document =The Data is stored entire comment.
