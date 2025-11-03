@@ -70,24 +70,6 @@ If you don’t use a WHERE clause in:
 * WHERE filters before grouping and joining
 * It is used for individual roows.
 =============================================================================== */
-
--- Retrieve customers with a score not equal to 0
-SELECT *
-FROM customers
-WHERE score != 0
-
--- Retrieve customers from Germany
-SELECT *
-FROM customers
-WHERE country = 'Germany'
-
--- Retrieve the name and country of customers from Germany
-SELECT
-    first_name,
-    country
-FROM customers
-WHERE country = 'Germany'
-
 -- Filtering records in SELECT
 SELECT * 
 FROM Employees
@@ -137,9 +119,74 @@ FROM Employees
 GROUP BY DeptID
 HAVING AVG(Salary) > 50000;
 
+/*=================
+EXAMPLE
+==================*/
+-- Retrieve customers with a score not equal to 0
+SELECT *
+FROM customers
+WHERE score != 0
+
+-- Retrieve customers from Germany
+SELECT *
+FROM customers
+WHERE country = 'Germany'
+
+-- Retrieve the name and country of customers from Germany
+SELECT
+    first_name,
+    country
+FROM customers
+WHERE country = 'Germany'
+
 /* ==============================================================================
    ORDER BY
+* It’s one of the most useful clauses for arranging your query results in a specific order.
+
+*The ORDER BY clause is used to sort the result set of a SQL query — either in:
+   - Ascending order (smallest to largest → default)
+   - Descending order (largest to smallest)
 =============================================================================== */
+-- Basic Syntax
+SELECT column1, column2
+FROM table_name
+ORDER BY column_name [ASC|DESC];
+
+--Sort by one column
+SELECT * 
+FROM Employees
+ORDER BY Salary; -- Sorts all employees by Salary in ascending order (lowest → highest).
+
+-- Sort in descending order
+SELECT Name, Salary 
+FROM Employees
+ORDER BY Salary DESC; -- Displays employees from highest to lowest salary.
+
+-- Sort by multiple columns
+SELECT Name, Department, Salary
+FROM Employees
+ORDER BY Department ASC, Salary DESC; -- First sorts data by Department alphabetically (A → Z)
+									  -- If two employees are in the same department, it then sorts them by Salary (high → low)
+
+-- Using column position
+SELECT Name, Salary, Department
+FROM Employees
+ORDER BY 2 DESC; -- The number 2 means the second column (Salary) in the SELECT list.
+
+-- ORDER BY with WHERE
+SELECT Name, Salary
+FROM Employees
+WHERE Department = 'IT'
+ORDER BY Salary DESC; -- Filters only IT employees, then sorts them by highest to lowest salary.
+
+-- ORDER BY with computed column
+SELECT Name, (Salary + Bonus) AS TotalPay
+FROM Employees
+ORDER BY TotalPay DESC; -- Sorts employees by their total pay (salary + bonus) in descending order.
+
+/*======================
+EXAMPLE
+=======================*/
 
 /* Retrieve all customers and 
    sort the results by the highest score first. */
@@ -178,8 +225,51 @@ ORDER BY score DESC
 
 /* ==============================================================================
    GROUP BY
+The GROUP BY clause in SQL is used to group rows that have the same values in one or more columns.
+* It is often used with aggregate functions like:
+   -- COUNT()
+   -- SUM()
+   -- AVG()
+   -- MIN()
+   -- MAX()
+So basically, GROUP BY helps you get summary information from your data (like totals, averages, or counts per group).
 =============================================================================== */
+-- Syntax
+SELECT column_name, aggregate_function(column_name)
+FROM table_name
+GROUP BY column_name;
 
+-- Average salary by department
+SELECT Department, AVG(Salary) AS AvgSalary
+FROM Employees
+GROUP BY Department; -- SQL grouped all rows by Department.
+					 -- Then for each department, it calculated the average salary.
+
+-- Count employees in each department
+SELECT Department, COUNT(*) AS TotalEmployees
+FROM Employees
+GROUP BY Department;
+
+-- Total salary per department
+SELECT Department, SUM(Salary) AS TotalSalary
+FROM Employees
+GROUP BY Department;
+
+-- GROUP BY with WHERE
+SELECT Department, COUNT(*) AS TotalEmployees
+FROM Employees
+WHERE Salary > 45000
+GROUP BY Department; -- Filters rows first (only employees with salary > 45000), then groups them by department. 
+
+-- GROUP BY with HAVING
+SELECT Department, AVG(Salary) AS AvgSalary
+FROM Employees
+GROUP BY Department
+HAVING AVG(Salary) > 50000; -- Returns only departments where average salary is greater than 50,000.
+
+/*==============
+EXAMPLE
+===============*/
 -- Find the total score for each country
 SELECT 
     country,
@@ -206,8 +296,55 @@ GROUP BY country
 
 /* ==============================================================================
    HAVING
+The HAVING clause in SQL is used to filter the results of grouped data (the results created by GROUP BY).
+* Think of it like this:
+	- WHERE filters rows before grouping
+	- HAVING filters groups after grouping
 =============================================================================== */
+-- Syntax
+SELECT column_name, aggregate_function(column_name)
+FROM table_name
+GROUP BY column_name
+HAVING condition;
 
+-- Using HAVING with GROUP BY
+SELECT Department, AVG(Salary) AS AvgSalary
+FROM Employees
+GROUP BY Department
+HAVING AVG(Salary) > 50000;
+/*
+* GROUP BY → groups rows by department
+* AVG(Salary) → calculates average salary for each group
+* HAVING → filters groups where average salary > 50,000
+*/
+
+-- HAVING without WHERE
+SELECT Department, COUNT(*) AS TotalEmployees
+FROM Employees
+GROUP BY Department
+HAVING COUNT(*) >= 2; -- Shows departments that have 2 or more employees.
+
+-- Using WHERE and HAVING together
+SELECT Department, AVG(Salary) AS AvgSalary
+FROM Employees
+WHERE Salary > 40000        -- filters individual rows
+GROUP BY Department
+HAVING AVG(Salary) > 50000; -- filters groups
+/*
+WHERE removes low-salary employees (row-level filter)
+GROUP BY groups remaining rows by department
+HAVING keeps only those departments with average > 50,000
+*/
+
+--HAVING with multiple conditions
+SELECT Department, SUM(Salary) AS TotalSalary
+FROM Employees
+GROUP BY Department
+HAVING SUM(Salary) > 100000 AND COUNT(*) >= 2; -- Shows departments where total salary > 100,000 and at least 2 employees.
+
+/*==============
+EXAMPLE
+===============*/
 /* Find the average score for each country
    and return only those countries with an average score greater than 430 */
 SELECT
@@ -227,6 +364,21 @@ FROM customers
 WHERE score != 0
 GROUP BY country
 HAVING AVG(score) > 430
+
+/*
+* GROUP BY will groups rows with same values used with Aggregate functions.
+* HAVING will Filters grouped data used with GROUP BY.
+* ORDER BY will Sorts results used withAny query.
+*/
+/*
+Order of SQL Execution
+1️⃣ FROM
+2️⃣ WHERE
+3️⃣ GROUP BY
+4️⃣ HAVING
+5️⃣ SELECT
+6️⃣ ORDER BY
+*/
 
 /* ==============================================================================
    DISTINCT
@@ -297,5 +449,6 @@ SELECT
     'New Customer' AS customer_type
 
 FROM customers;
+
 
 
