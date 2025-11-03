@@ -54,7 +54,8 @@ SELECT
 FROM customers
 
 /* ==============================================================================
-   WHERE = The WHERE clause in SQL is used to filter records (rows) in a 
+   WHERE 
+The WHERE clause in SQL is used to filter records (rows) in a 
 	table — it tells the database which rows to select, update, or delete based on a specific condition.
 
 When to Use the WHERE Clause:
@@ -296,4 +297,5 @@ SELECT
     'New Customer' AS customer_type
 
 FROM customers;
+
 
