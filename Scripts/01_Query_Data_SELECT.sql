@@ -87,6 +87,55 @@ SELECT
 FROM customers
 WHERE country = 'Germany'
 
+-- Filtering records in SELECT
+SELECT * 
+FROM Employees
+WHERE Department = 'HR';
+
+-- With numeric condition
+SELECT Name, Salary 
+FROM Employees
+WHERE Salary > 50000;
+
+-- Using multiple conditions (AND / OR)
+SELECT * 
+FROM Employees
+WHERE Department = 'IT' AND Salary > 40000;
+
+-- Using WHERE in UPDATE
+UPDATE Employees
+SET Salary = Salary + 5000
+WHERE Department = 'Sales';
+
+-- Using WHERE in DELETE
+DELETE FROM Employees
+WHERE EmployeeID = 101;
+
+-- Using pattern matching (LIKE)
+SELECT * 
+FROM Employees
+WHERE Name LIKE 'A%';
+
+-- Query: Join + Where
+SELECT e.Name, d.DeptName, e.Salary
+FROM Employees e
+JOIN Departments d ON e.DeptID = d.DeptID
+WHERE e.Salary > 50000;
+
+-- WHERE with GROUP BY
+/* GROUP BY is used to group rows that have the same value in one or more columns (like department).
+The WHERE clause filters before grouping happens.*/
+SELECT DeptID, AVG(Salary) AS AvgSalary
+FROM Employees
+WHERE Salary > 40000
+GROUP BY DeptID;
+
+-- If you want to filter after grouping, use HAVING, not WHERE.
+SELECT DeptID, AVG(Salary) AS AvgSalary
+FROM Employees
+GROUP BY DeptID
+HAVING AVG(Salary) > 50000;
+
 /* ==============================================================================
    ORDER BY
 =============================================================================== */
@@ -247,3 +296,4 @@ SELECT
     'New Customer' AS customer_type
 
 FROM customers;
+
