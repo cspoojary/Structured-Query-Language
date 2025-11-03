@@ -54,7 +54,20 @@ SELECT
 FROM customers
 
 /* ==============================================================================
-   WHERE
+   WHERE = The WHERE clause in SQL is used to filter records (rows) in a 
+	table — it tells the database which rows to select, update, or delete based on a specific condition.
+
+When to Use the WHERE Clause:
+  * Get specific data from a table (not all rows)
+  * Apply conditions in SELECT, UPDATE, or DELETE statements
+  * Filter rows before grouping or joining
+
+If you don’t use a WHERE clause in:
+  * UPDATE → it updates all rows
+  * DELETE → it deletes all rows
+
+* WHERE filters before grouping and joining
+* It is used for individual roows.
 =============================================================================== */
 
 -- Retrieve customers with a score not equal to 0
@@ -232,4 +245,5 @@ SELECT
     id,
     first_name,
     'New Customer' AS customer_type
+
 FROM customers;
