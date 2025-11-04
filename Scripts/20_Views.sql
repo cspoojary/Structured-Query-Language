@@ -1,5 +1,35 @@
 /* ==============================================================================
-   SQL Views
+   SQL Views 
+A View is a virtual table based on the result of an SQL query.
+It does not store data physically; instead, it fetches data from one or more base tables whenever you access it.
+
+Types of Views in SQL
+1. Simple View
+A simple view is created using a single table and does not contain group functions or joins.
+You can update data through a simple view (if no aggregate or DISTINCT is used).
+
+2. Complex View
+
+Definition:
+A complex view is created using multiple tables (using JOINs) or group functions (like SUM, AVG).
+It cannot be updated directly.
+
+3. Materialized View
+
+Definition:
+A materialized view physically stores the result of the query.
+It is used to improve performance for complex queries by storing data instead of recalculating each time.
+
+4. Inline View (Subquery View)
+
+Definition:
+An inline view is a subquery in the FROM clause of a main query.
+It is not stored permanently — it exists only during query execution.
+
+5. System View (or Data Dictionary View)
+
+Definition:
+These are predefined views created by the database system to provide metadata information — about users, tables, constraints, etc.
 -------------------------------------------------------------------------------
    This script demonstrates various view use cases in SQL Server.
    It includes examples for creating, dropping, and modifying views, hiding
@@ -11,6 +41,35 @@
      3. USE CASE - DATA SECURITY
 ===============================================================================
 */
+
+/*+===========================================================================
+Simple View
+A simple view is created using a single table and does not contain group functions or joins.
+You can update data through a simple view (if no aggregate or DISTINCT is used).
+==================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ==============================================================================
    CREATE, DROP, MODIFY VIEW
@@ -108,4 +167,5 @@ CREATE VIEW Sales.V_Order_Details_EU AS
     LEFT JOIN Sales.Employees AS e ON e.EmployeeID = o.SalesPersonID
     WHERE c.Country != 'USA'
 );
+
 GO
