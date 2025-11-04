@@ -226,11 +226,3 @@ FROM employees;
 
 -- Updatable: Limited
 -- Use: Data privacy and controlled access for users.
-
-
-
-
-
-
-
-
