@@ -384,11 +384,23 @@ Order of SQL Execution
    DISTINCT
 The DISTINCT keyword is used to remove duplicate rows from the result of a SELECT query.
 It makes sure that the data you get back contains only unique values.
+	
 =============================================================================== */
+-- Syntax
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
 
 -- Return Unique list of all countries
 SELECT DISTINCT country
 FROM customers
+
+-- Counting Unique Values
+SELECT COUNT(DISTINCT department) AS unique_departments
+FROM employees;
+
+-- With JOIN
+SELECT DISTINCT e.department_id, d.department_name
+FROM employees e
 
 /* ==============================================================================
    TOP
@@ -451,6 +463,7 @@ SELECT
     'New Customer' AS customer_type
 
 FROM customers;
+
 
 
 
