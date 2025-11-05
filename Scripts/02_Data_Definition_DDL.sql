@@ -117,7 +117,7 @@ Rename table	   ALTER TABLE employees RENAME TO company_staff;
 /* ============================================================================== 
    DROP
 The DROP command is used to delete entire database objects — such as a table, database, view, column, or constraint — permanently.
-⚠️ Once you DROP something, all data and structure are gone — you can’t undo it (unless you have a backup).
+Once you DROP something, all data and structure are gone — you can’t undo it (unless you have a backup).
 =============================================================================== */
 -- Syntax
 DROP object_type object_name;
@@ -147,3 +147,4 @@ DROP VIEW high_salary_employees;
 -- DROP INDEX
 -- Deletes an index created for faster searching.
 DROP INDEX idx_emp_name;
+
