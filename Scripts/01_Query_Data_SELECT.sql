@@ -382,6 +382,8 @@ Order of SQL Execution
 
 /* ==============================================================================
    DISTINCT
+The DISTINCT keyword is used to remove duplicate rows from the result of a SELECT query.
+It makes sure that the data you get back contains only unique values.
 =============================================================================== */
 
 -- Return Unique list of all countries
@@ -449,6 +451,7 @@ SELECT
     'New Customer' AS customer_type
 
 FROM customers;
+
 
 
 
