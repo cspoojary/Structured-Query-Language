@@ -13,7 +13,18 @@
 
 /* ============================================================================== 
    CREATE
+The CREATE statement** is used to create new objects** in a database such as:
+Tables
+Databases
+Views
+Procedures
+Functions
 =============================================================================== */
+-- CREATE DATABASE
+CREATE DATABASE company_db;
+
+
+
 
 /* Create a new table called persons 
    with columns: id, person_name, birth_date, and phone */
@@ -42,4 +53,5 @@ DROP COLUMN phone
 =============================================================================== */
 
 -- Delete the table persons from the database
+
 DROP TABLE persons
