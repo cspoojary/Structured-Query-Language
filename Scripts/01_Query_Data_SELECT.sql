@@ -384,7 +384,10 @@ Order of SQL Execution
    DISTINCT
 The DISTINCT keyword is used to remove duplicate rows from the result of a SELECT query.
 It makes sure that the data you get back contains only unique values.
-	
+
+TOP			Limits number of rows returned	SQL Server
+LIMIT		Limits number of rows			MySQL / PostgreSQL
+FETCH FIRST	Limits number of rows			Oracle
 =============================================================================== */
 -- Syntax
 SELECT DISTINCT column1, column2, ...
@@ -404,7 +407,13 @@ FROM employees e
 
 /* ==============================================================================
    TOP
+The TOP keyword is used to limit the number of rows returned by a query.
+It helps you fetch only a specific number (or percentage) of records from a table.
 =============================================================================== */
+ --Syntax 
+SELECT TOP (number) column1, column2, ...
+FROM table_name
+WHERE condition;
 
 -- Retrieve only 3 Customers
 SELECT TOP 3 *
@@ -425,6 +434,20 @@ SELECT TOP 2 *
 FROM orders
 ORDER BY order_date DESC
 
+-- Get Top 5 Employees
+SELECT TOP 5 emp_name, salary
+FROM employees;
+
+-- Top 10% of Salaries
+SELECT TOP 10 PERCENT emp_name, salary
+FROM employees
+ORDER BY salary DESC;
+
+-- Highest salary Employees (MySQL Style)
+SELECT emp_name, salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 3;
 /* ==============================================================================
    All Together
 =============================================================================== */
@@ -463,6 +486,7 @@ SELECT
     'New Customer' AS customer_type
 
 FROM customers;
+
 
 
 
