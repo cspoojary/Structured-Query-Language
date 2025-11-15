@@ -38,3 +38,98 @@ The structure of a Relational Database Management System (**RDBMS**) is built up
 * The **Row (Tuple/Record)** represents a unique instance of the data within the table.
 * The **Column (Attribute/Field)** defines the structure and type of data held by the table.
 ---
+
+## Keys and Data Integrity
+Keys are attributes (columns) used to uniquely identify rows and establish relationships between tables, ensuring data integrity.
+
+**Primary Key:** A column or set of columns that uniquely identifies every row in a table. Its values must be UNIQUE and NOT NULL (essential for data integrity).
+
+**Foreign Key:** An attribute in one table that refers to the Primary Key of another table. It is used to link the two tables and enforce Referential Integrity—ensuring that a relationship exists and is valid (e.g., you cannot reference a non-existent customer ID).
+
+---
+
+## Database Constraints
+Constraints are rules enforced on data columns to limit the type of data that can be inserted or updated, ensuring the accuracy and reliability of the data.
+**NOT NULL:** Ensures that a column cannot have a NULL value.
+**UNIQUE:** Ensures that all values in a column are different. A table can have multiple UNIQUE constraints.
+**DEFAULT:** Provides a default value for a column when a value is not explicitly specified during insertion.
+**CHECK:** Allows specifying a condition that must be satisfied by all values in a column (e.g., age $> 18$).
+**Constraint Enforcement and Violation Handling:** When an SQL command (INSERT, UPDATE, DELETE) attempts to violate a defined constraint (e.g., trying to insert a NULL value into a NOT NULL column), the DBMS rejects the operation and returns an error, preserving the integrity of the data.
+
+---
+
+## Normalization
+
+**Normalization** is a systematic process for designing a relational database. Its goal is to restructure tables to **reduce data redundancy** and improve **data integrity** by decomposing large, complex tables into smaller, well-structured ones.
+
+### Purpose
+
+* **Reduce Redundancy:** Prevents storing the same piece of information multiple times, saving space and improving efficiency.
+* **Eliminate Anomalies:** Prevents data inconsistencies that arise from redundancy:
+    * **Insertion Anomaly:** Cannot insert data for a new entity without data for another dependent entity.
+    * **Deletion Anomaly:** Deleting data for one entity unintentionally deletes data for another related entity.
+    * **Update Anomaly:** Updating a piece of data requires updating multiple rows, and failure to update all copies leads to inconsistency.
+* **Logical Dependency:** Ensures data dependencies are clear and logical (i.e., every non-key attribute is dependent on the whole key).
+
+---
+
+### Normal Forms (Progressive Stages)
+
+| Normal Form | Requirement | Focus/Eliminates |
+| :--- | :--- | :--- |
+| **1NF (First Normal Form)** | Every attribute must contain only **atomic (indivisible)** values, and there are **no repeating groups** of columns. | Repeating Groups |
+| **2NF (Second Normal Form)** | Must be in **1NF**, and all non-key attributes must be **fully dependent on the entire Primary Key**. | Partial Dependency |
+| **3NF (Third Normal Form)** | Must be in **2NF**, and there should be **no transitive dependency** (non-key attributes should not depend on other non-key attributes). | Transitive Dependency |
+| **BCNF (Boyce-Codd Normal Form)** | A stricter version of 3NF. For every non-trivial functional dependency $X \rightarrow Y$, $X$ must be a **Super Key**. | Anomalies due to overlapping Candidate Keys |
+
+---
+
+##  Entity-Relationship (E-R) Modeling
+
+**E-R Modeling** is a high-level conceptual data model used to describe the data requirements of a system. It provides a visual, diagrammatic approach to represent the structure of the data.
+
+### ER Diagrams (ERDs)
+
+An **ER Diagram** is the visual representation of the E-R Model, using specific symbols:
+
+* **Entities:** Real-world objects or concepts that have independent existence (e.g., *Customer*, *Product*, *Order*).
+    * **Representation:** Rectangles.
+* **Attributes:** Properties or characteristics that describe an entity (e.g., *Customer Name*, *Product Price*, *Order Date*).
+    * **Representation:** Ovals.
+* **Relationships:** Associations or links between entities (e.g., *A Customer **places** an Order*).
+    * **Representation:** Diamonds.
+
+### Cardinality (Types of Relationships)
+
+Cardinality defines the number of instances of one entity that can be associated with the number of instances of another entity.
+
+| Type | Description | Example |
+| :--- | :--- | :--- |
+| **1:1 (One-to-One)** | An instance of entity A is related to at most one instance of entity B, and vice-versa. | One Employee is assigned One Company Car. |
+| **1:N (One-to-Many)** | An instance of entity A can be related to multiple instances of entity B, but an instance of B is related to only one instance of A. | One Department has Many Employees. |
+| **N:M (Many-to-Many)** | An instance of entity A can be related to multiple instances of entity B, and vice-versa. | Many Students enroll in Many Courses. |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
