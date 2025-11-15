@@ -20,7 +20,20 @@
 RDBMS Term,Common Alias,Description
 
 ## Key Concepts in the Relational Model
-The RDBMS structure is built upon these fundamental concepts:
-Table,Relation,"A collection of related data, organized in rows and columns."
-Row,Tuple / Record,"A single entry in a table, representing a single, complete set of data (e.g., one customer's details)."
-Column,Attribute / Field,"A vertical entity in a table, representing a specific type of data for every row (e.g., Customer Name)."
+### RDBMS Fundamental Concepts
+
+The structure of a Relational Database Management System (**RDBMS**) is built upon these core concepts, organizing data into a logical, structured format.
+
+| RDBMS Term | Common Alias | Description |
+| :--- | :--- | :--- |
+| **Table** | **Relation** | A collection of related data, organized in rows and columns. |
+| **Row** | **Tuple** / **Record** | A single entry in a table, representing a single, complete set of data (e.g., one customer's details). |
+| **Column** | **Attribute** / **Field** | A vertical entity in a table, representing a specific type of data for every row (e.g., Customer Name). |
+
+---
+
+### Key Takeaway
+
+* The **Table (Relation)** is the main container.
+* The **Row (Tuple/Record)** represents a unique instance of the data within the table.
+* The **Column (Attribute/Field)** defines the structure and type of data held by the table.
