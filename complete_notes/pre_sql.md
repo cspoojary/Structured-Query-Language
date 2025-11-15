@@ -17,3 +17,10 @@
 **2-Tier Architecture (Client-Server):** The application (client) resides on one machine and communicates directly with the database (server) on another machine. It's often used in Local Area Networks (LANs).
 
 **3-Tier Architecture:** Introduced a middle layer (an Application Server or business logic tier) between the client (presentation tier) and the database (data tier). This is standard for modern web applications, improving scalability, security, and maintainability.
+RDBMS Term,Common Alias,Description
+
+## Key Concepts in the Relational Model
+The RDBMS structure is built upon these fundamental concepts:
+Table,Relation,"A collection of related data, organized in rows and columns."
+Row,Tuple / Record,"A single entry in a table, representing a single, complete set of data (e.g., one customer's details)."
+Column,Attribute / Field,"A vertical entity in a table, representing a specific type of data for every row (e.g., Customer Name)."
