@@ -8,6 +8,7 @@
 **DBMS:** Evolved from file systems to centrally manage data, offering features like data security, concurrency, and integrity.
 
 **RDBMS (Relational Database Management System):** A specific type of DBMS based on the Relational Model (developed by E.F. Codd in 1970). It organizes data into tables (relations), which are linked by common fields, providing a logical, structured way to store and query data using SQL.
+
 ---
 ## Database Architecture
 **Database architecture describes how the database system components are distributed and interact.**
@@ -18,6 +19,7 @@
 
 **3-Tier Architecture:** Introduced a middle layer (an Application Server or business logic tier) between the client (presentation tier) and the database (data tier). This is standard for modern web applications, improving scalability, security, and maintainability.
 RDBMS Term,Common Alias,Description
+
 ---
 ## Key Concepts in the Relational Model
 ### RDBMS Fundamental Concepts
