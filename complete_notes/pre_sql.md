@@ -47,6 +47,30 @@ Keys are attributes (columns) used to uniquely identify rows and establish relat
 **Foreign Key:** An attribute in one table that refers to the Primary Key of another table. It is used to link the two tables and enforce Referential Integrity—ensuring that a relationship exists and is valid (e.g., you cannot reference a non-existent customer ID).
 
 ---
+## What is MYSQL?
+MySQL is an open-source Relational Database Management System (RDBMS) used to store, manage, and retrieve data.
+It uses SQL (Structured Query Language) to communicate with the database.
+
+#### It is widely used in:
+- Web applications
+-  Data analytics
+-  E-commerce platforms
+- Enterprise applications
+- Companies like Facebook, YouTube, Netflix, Twitter use MySQL.
+
+### Key Features
+- 1. Open Source
+MySQL is free to use and modify, which makes it popular for startups and developers.
+- 2. Relational Database
+Data is stored in tables (rows & columns) with clear relationships.
+- 3. High Performance
+MySQL is optimized for:
+Fast read/write operations
+Handling large databases
+High-traffic applications
+
+
+
 
 ## Database Constraints
 Constraints are rules enforced on data columns to limit the type of data that can be inserted or updated, ensuring the accuracy and reliability of the data.
