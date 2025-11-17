@@ -64,10 +64,16 @@ It uses SQL (Structured Query Language) to communicate with the database.
 - 2. Relational Database
    - Data is stored in tables (rows & columns) with clear relationships.
 - 3. High Performance
-MySQL is optimized for:
-Fast read/write operations
-Handling large databases
-High-traffic applications
+   - MySQL is optimized for:
+      - Fast read/write operations
+      - Handling large databases
+      - High-traffic applications
+- 4. Scalability
+   - MySQL supports:
+      - Millions of rows
+      - Large number of concurrent users
+      - Horizontal and vertical scaling
+
 
 
 
