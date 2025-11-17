@@ -5,5 +5,6 @@ SQL (Structured Query Language) is a standard language used to store, manage, an
 SQL is used to interact with relational database systems like MySQL, Oracle, PostgreSQL, SQL Server, etc.
 
 ```sql
-SELECT * FROM employees;     # SQL command retrieves all records from the employees table.
+SELECT * FROM employees;
+# SQL command retrieves all records from the employees table.
 ```
