@@ -16,21 +16,13 @@ SQL commands are grouped into 5 main categories:
 - DCL - Data Control Language - GRANT,REVOKE
 - TCL - Transaction Control Language - COMMIT,ROLLBACK,SAVPOINT
 
-# SQL vs NoSQL Comparison
+## SQL vs NoSQL Comparison
+| Feature         | SQL (Relational)                | NoSQL (Non-relational)                        |
+|-----------------|---------------------------------|------------------------------------------------|
+| **Type**        | Relational                      | Non-relational                                 |
+| **Data Format** | Tables (rows & columns)         | JSON, documents, key-value, graph              |
+| **Schema**      | Fixed                           | Flexible                                       |
+| **Scalability** | Vertical                        | Horizontal                                     |
+| **Example DBs** | MySQL, Oracle, SQL Server       | MongoDB, Cassandra, Firebase                   |
+| **Best for**    | Structured data, transactions   | Unstructured or semi-structured data           |
 
-  ------------------------------------------------------------------------------
-  Feature           SQL (Relational)          NoSQL (Non-relational)
-  ----------------- ------------------------- ----------------------------------
-  **Type**          Relational                Non-relational
-
-  **Data Format**   Tables (rows & columns)   JSON, documents, key-value, graph
-
-  **Schema**        Fixed                     Flexible
-
-  **Scalability**   Vertical                  Horizontal
-
-  **Example DBs**   MySQL, Oracle, SQL Server MongoDB, Cassandra, Firebase
-
-  **Best for**      Structured data,          Unstructured or semi-structured
-                    transactions              data
-  ------------------------------------------------------------------------------
