@@ -74,9 +74,60 @@ It uses SQL (Structured Query Language) to communicate with the database.
       - Large number of concurrent users
       - Horizontal and vertical scaling
 
+5. Security
+   - MySQL provides:
+      - User authentication
+      - Encrypted passwords
+      - Access control (GRANT, REVOKE)
 
+6. Cross-Platform Support
+   - It works on:
+      - Windows
+      - Linux
+      - macOS
+      - Cloud platforms (AWS, Azure, GCP)
 
+7. ACID Compliance
+   - Ensures reliable transactions:
+      - Atomicity
+      - Consistency
+      - Isolation
+      - Durability
+   - Ensures banking and financial data accuracy.
 
+8. Replication Support
+   - MySQL supports:
+      - Master–slave replication
+      - Master–master replication
+   - Used for:
+      - High availability
+      -Load balancing
+
+9. Stored Procedures, Triggers, Views
+   - MySQL supports database programming:
+      - Stored procedures → reusable SQL blocks
+      - Triggers → automatic actions on events
+      - Views → virtual tables for simplified queries
+
+10. Supports Multiple Storage Engines
+   - Most important engines:
+      - InnoDB → default, supports transactions, foreign keys
+      - MyISAM → fast reads
+      - Memory → stores data in RAM for speed
+
+11. Backup & Recovery
+   - MySQL allows:
+      - Logical backups (mysqldump)
+      - Physical backups
+      - Point-in-time recovery
+12. Easy Integration
+   - Works with:
+      - Python
+      - Java
+      - PHP
+      - Node.js
+      - .NET
+---
 
 ## Database Constraints
 Constraints are rules enforced on data columns to limit the type of data that can be inserted or updated, ensuring the accuracy and reliability of the data.
