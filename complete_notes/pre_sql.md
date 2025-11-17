@@ -59,16 +59,16 @@ It uses SQL (Structured Query Language) to communicate with the database.
 - Companies like Facebook, YouTube, Netflix, Twitter use MySQL.
 
 ### Key Features
-- 1. Open Source
+1. Open Source
    - MySQL is free to use and modify, which makes it popular for startups and developers.
-- 2. Relational Database
+2. Relational Database
    - Data is stored in tables (rows & columns) with clear relationships.
-- 3. High Performance
+3. High Performance
    - MySQL is optimized for:
       - Fast read/write operations
       - Handling large databases
       - High-traffic applications
-- 4. Scalability
+4. Scalability
    - MySQL supports:
       - Millions of rows
       - Large number of concurrent users
