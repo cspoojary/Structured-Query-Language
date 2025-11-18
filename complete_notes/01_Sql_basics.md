@@ -18,6 +18,23 @@ SQL commands are grouped into 5 main categories:
 
 ----
 
+## Database vs Table
+### Database
+- A container that stores multiple tables.
+- Example: school_db
+
+### Table
+- A structured format inside a database that stores data in rows and columns.
+- Example table: students
+
+## Schema
+- A schema defines the structure of the database:
+  - tables
+  - columns
+  - datatypes
+  - constraints
+  - relations
+
 ## SQL vs NoSQL Comparison
 | Feature         | SQL (Relational)                | NoSQL (Non-relational)                        |
 |-----------------|---------------------------------|------------------------------------------------|
