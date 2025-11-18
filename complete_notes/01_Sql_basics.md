@@ -10,11 +10,11 @@ SELECT * FROM employees;
 ```
 ## Types of SQL Commands
 SQL commands are grouped into 5 main categories:
-- DDL - Data Definition Language - CREATE,ALTER,DROP,TRUNCATE,RENAME
-- DML - Data Manipulation Language - INSERT,UPDATE,DELETE
-- DQL - Data Query Language - SELECT
-- DCL - Data Control Language - GRANT,REVOKE
-- TCL - Transaction Control Language - COMMIT,ROLLBACK,SAVPOINT
+- DDL (Data Definition Language): Defines schema (CREATE, ALTER, DROP).
+- DML (Data Manipulation Language): Modify data (INSERT, UPDATE, DELETE).
+- DCL (Data Control Language): Permission control (GRANT, REVOKE).
+- TCL (Transaction Control Language): Transaction commands (COMMIT, ROLLBACK).
+- DQL (Data Query Language): SELECT queries.
 
 ----
 
