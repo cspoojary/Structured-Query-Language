@@ -15,11 +15,11 @@ SELECT * FROM employees;
 - Updating and deleting records
 - Managing permissions & transactions
 ### Interview Question
-1Q1. What is SQL and why is it used?
-Q2. Name some relational database management systems.
-Q3. What is a table in SQL?
-Q4. What is the difference between a database and a table?
-Q5. Is SQL a programming language or query language? Explain.
+- Q1. What is SQL and why is it used?
+- Q2. Name some relational database management systems.
+- Q3. What is a table in SQL?
+- Q4. What is the difference between a database and a table?
+- Q5. Is SQL a programming language or query language? Explain.
 
 
 
