@@ -31,7 +31,17 @@ SQL commands are grouped into 5 main categories:
 - DCL (Data Control Language): Permission control (GRANT, REVOKE).
 - TCL (Transaction Control Language): Transaction commands (COMMIT, ROLLBACK).
 - DQL (Data Query Language): SELECT queries.
-
+### Interview Question
+Q1. What are the five categories of SQL commands?
+Q2. What is the difference between DDL and DML?
+Q3. Which category does SELECT belong to? Why?
+Q4. Difference between DROP, DELETE, and TRUNCATE.
+Q5. What is COMMIT and ROLLBACK?
+Q6. Write a DDL command to create a table employee.
+Q7. Write a DML query to update salary of employee id=5.
+Q8. Write a DCL command to give permission to user.
+Q9. Give real-time example where TCL is used.
+Q10. What happens when you do UPDATE without COMMIT in a transaction?
 ----
 
 ## Database vs Table
@@ -51,6 +61,8 @@ SQL commands are grouped into 5 main categories:
   - constraints
   - relations
 
+---
+
 ## SQL vs NoSQL Comparison
 | Feature         | SQL (Relational)                | NoSQL (Non-relational)                        |
 |-----------------|---------------------------------|------------------------------------------------|
@@ -60,6 +72,17 @@ SQL commands are grouped into 5 main categories:
 | **Scalability** | Vertical                        | Horizontal                                     |
 | **Example DBs** | MySQL, Oracle, SQL Server       | MongoDB, Cassandra, Firebase                   |
 | **Best for**    | Structured data, transactions   | Unstructured or semi-structured data           |
+
+### Interview Question
+Q1. What is NoSQL? Why is it used?
+Q2. Give differences between SQL and NoSQL.
+Q3. Name different types of NoSQL databases.
+Q4. Which databases scale horizontally?
+
+### Scenario-Based
+Q1. Which database would you choose for real-time chat app? Why?
+Q2. Which is best for banking systems and why?
+
 
 ----
 
@@ -136,7 +159,18 @@ Some databases support extra types:
 | `UUID`     | Unique identifier       |
 | `GEOMETRY` | Spatial data            |
 ----
+### Interview Question
+Q1. What are SQL data types?
+Q2. Difference between CHAR and VARCHAR.
+Q3. What are numeric data types?
+Q4. What is DECIMAL(10,2)? Explain precision & scale.
+Q5. What is boolean data type?
 
+### Practical
+Q1. Create a student table with all data types.
+Q2. How do you store date and time in SQL?
+
+---
 ## Comments in SQL
 Used to explain the SQL code.
 ```sql
@@ -145,3 +179,6 @@ Used to explain the SQL code.
 /* This is
 a multi-line comment */
 ```
+Q1. What is the purpose of comments in SQL?
+Q2. Difference between single-line and multi-line comments.
+Q3. Will comments affect SQL execution?
