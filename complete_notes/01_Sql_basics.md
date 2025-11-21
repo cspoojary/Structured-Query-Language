@@ -8,6 +8,22 @@ SQL is used to interact with relational database systems like MySQL, Oracle, Pos
 SELECT * FROM employees;
 # SQL command retrieves all records from the employees table.
 ```
+### SQL supports operations like:
+- Creating databases & tables
+- Inserting data
+- Querying/filtering results
+- Updating and deleting records
+- Managing permissions & transactions
+### Interview Question
+1Q1. What is SQL and why is it used?
+Q2. Name some relational database management systems.
+Q3. What is a table in SQL?
+Q4. What is the difference between a database and a table?
+Q5. Is SQL a programming language or query language? Explain.
+
+
+
+---
 ## Types of SQL Commands
 SQL commands are grouped into 5 main categories:
 - DDL (Data Definition Language): Defines schema (CREATE, ALTER, DROP).
